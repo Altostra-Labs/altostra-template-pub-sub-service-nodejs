@@ -1,6 +1,6 @@
 {
   "description": "This template creates a simple PubSub project with multiple subscribers and publishers",
-  "blueprint": [
+  "blueprints": [
     {
       "version": "2019-10-24",
       "connections": {
