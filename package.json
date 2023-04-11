@@ -1,0 +1,17 @@
+{
+  "name": "altostra-template-pub-sub-service-nodejs",
+  "version": "1.0.0",
+  "description": "A simple PubSub project with multiple subscribers and publishers",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://https://github.com/Altostra-Labs/altostra-template-pub-sub-service-nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://https://github.com/Altostra-Labs/altostra-template-pub-sub-service-nodejs/issues"
+  },
+  "homepage": "https://https://github.com/Altostra-Labs/altostra-template-pub-sub-service-nodejs#readme"
+}
