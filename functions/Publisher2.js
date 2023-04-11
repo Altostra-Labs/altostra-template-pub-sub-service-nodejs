@@ -7,7 +7,7 @@ module.exports.handler = async (event, context) => {
 
   await sns
     .publish({
-      Message: { event: event.body, eventId: context.awsRequestId, functionName: context.functionName },
+      Message: JSON.stringify({ event: event.body, eventId: context.awsRequestId, functionName: context.functionName }),
       TopicArn: TOPIC_ARN,
     })
     .promise()
