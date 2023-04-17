@@ -66,7 +66,7 @@
         "resources": {
             "ApiGateway01": {
                 "type": "resource.api",
-                "name": "ApiGateway01",
+                "name": "api",
                 "cors": {
                     "type": "api.cors.none"
                 },
@@ -95,7 +95,7 @@
             },
             "Publisher01": {
                 "type": "resource.compute.function",
-                "name": "Publisher",
+                "name": "publisher-1",
                 "memory": 512,
                 "timeout": 6,
                 "isDefaultPrivateSubnets": false,
@@ -107,18 +107,22 @@
                 "environment": {
                     "variables": {}
                 },
-                "id": "Publisher01"
+                "id": "Publisher01",
+                "endpointUrl": {
+                    "enabled": false,
+                    "authenticated": false
+                }
             },
             "Topic01": {
                 "type": "resource.notification-topic",
-                "name": "Topic",
+                "name": "event-bus",
                 "displayName": "",
-                "topicName": "Events",
+                "topicName": "event-bus",
                 "id": "Topic01"
             },
             "Subscriber01": {
                 "type": "resource.compute.function",
-                "name": "Subscriber",
+                "name": "subscriber-1",
                 "memory": 512,
                 "timeout": 6,
                 "isDefaultPrivateSubnets": false,
@@ -130,11 +134,15 @@
                 "environment": {
                     "variables": {}
                 },
-                "id": "Subscriber01"
+                "id": "Subscriber01",
+                "endpointUrl": {
+                    "enabled": false,
+                    "authenticated": false
+                }
             },
             "Table01": {
                 "type": "resource.table",
-                "name": "Table",
+                "name": "events",
                 "tableName": "",
                 "key": {
                     "hash": {
@@ -149,7 +157,7 @@
             },
             "Subscriber02": {
                 "type": "resource.compute.function",
-                "name": "Subscriber2",
+                "name": "subscriber-2",
                 "memory": 512,
                 "timeout": 6,
                 "isDefaultPrivateSubnets": false,
@@ -161,11 +169,15 @@
                 "environment": {
                     "variables": {}
                 },
-                "id": "Subscriber02"
+                "id": "Subscriber02",
+                "endpointUrl": {
+                    "enabled": false,
+                    "authenticated": false
+                }
             },
             "Publisher02": {
                 "type": "resource.compute.function",
-                "name": "Publisher2",
+                "name": "publisher-2",
                 "memory": 512,
                 "timeout": 6,
                 "isDefaultPrivateSubnets": false,
@@ -177,7 +189,11 @@
                 "environment": {
                     "variables": {}
                 },
-                "id": "Publisher02"
+                "id": "Publisher02",
+                "endpointUrl": {
+                    "enabled": false,
+                    "authenticated": false
+                }
             },
             "ApiEndpoint02": {
                 "type": "resource.api.endpoint",
