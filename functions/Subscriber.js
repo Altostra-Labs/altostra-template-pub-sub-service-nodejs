@@ -12,7 +12,11 @@ module.exports.handler = async ({ Records }, context) => {
         [TableName]: Records.map((record) => {
           return {
             PutRequest: {
-              Item: { pk: crypto.randomUUID(), event: record, createdBy: context.functionName },
+              Item: { 
+                pk: crypto.randomUUID(), 
+                event: record, 
+                createdBy: context.functionName 
+              },
             },
           }
         }),
